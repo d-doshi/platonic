@@ -1,0 +1,53 @@
+{
+  "random_seed": 42,
+  "data": {
+    "vocab_size": 4,
+    "num_classes": 4,
+    "multiplicity": 2,
+    "branching": 2,
+    "depth": 3,
+    "shared_depth": 2,
+    "num_languages": 2,
+    "switch_probability": 0.1
+  },
+  "model": {
+    "width": 32,
+    "heads": 4,
+    "layers": 2,
+    "activation": "relu",
+    "weight_sharing": true
+  },
+  "training": {
+    "train_examples": 64,
+    "validation_examples": 32,
+    "batch_size": 16,
+    "evaluation_batch_size": 16,
+    "epochs": 1,
+    "gradient_accumulation_steps": 1,
+    "loss_threshold": 0.000001,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "scheduler": "wsd",
+    "warmup_fraction": 0.02,
+    "decay_fraction": 0.1,
+    "min_lr_factor": 0.0,
+    "print_frequency": 1,
+    "save_frequency": 1,
+    "device": "cpu"
+  },
+  "analysis": {
+    "fit_pairs": 16,
+    "validation_pairs": 8,
+    "test_pairs": 16,
+    "fit_seed": 1000045,
+    "validation_seed": 2000046,
+    "test_seed": 3000048,
+    "feature_batch_size": 16,
+    "bp_pairs": 32,
+    "k": 3,
+    "probe_ridge": 0.001,
+    "metric_device": "cpu"
+  }
+}

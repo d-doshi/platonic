@@ -1,0 +1,57 @@
+{
+  "sweep": {
+    "shared_depths": [1, 2, 3],
+    "random_seeds": [42, 420, 4200, 42000]
+  },
+  "random_seed": 42,
+  "data": {
+    "vocab_size": 16,
+    "num_classes": 16,
+    "multiplicity": 4,
+    "branching": 2,
+    "depth": 4,
+    "shared_depth": 1,
+    "num_languages": 2,
+    "switch_probability": 0.1
+  },
+  "model": {
+    "width": 512,
+    "heads": 4,
+    "layers": 8,
+    "activation": "relu",
+    "weight_sharing": true
+  },
+  "training": {
+    "train_examples": 1048576,
+    "validation_examples": 32768,
+    "batch_size": 1024,
+    "evaluation_batch_size": 1024,
+    "epochs": 128,
+    "gradient_accumulation_steps": 1,
+    "loss_threshold": 0.000001,
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "scheduler": "wsd",
+    "warmup_fraction": 0.02,
+    "decay_fraction": 0.1,
+    "min_lr_factor": 0.0,
+    "print_frequency": 2048,
+    "save_frequency": 4,
+    "device": "auto"
+  },
+  "analysis": {
+    "fit_pairs": 4096,
+    "validation_pairs": 256,
+    "test_pairs": 256,
+    "fit_seed": 1000045,
+    "validation_seed": 2000046,
+    "test_seed": 3000048,
+    "feature_batch_size": 256,
+    "bp_pairs": 2048,
+    "k": 10,
+    "probe_ridge": 0.001,
+    "metric_device": "cpu"
+  }
+}

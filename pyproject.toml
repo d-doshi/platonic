@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "platonic-mrhm"
+version = "0.1.0"
+description = "Minimal reproduction code for Multilingual Random Hierarchy Model experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+  "numpy>=1.24,<3",
+  "torch>=2.1,<3",
+]
+
+[project.scripts]
+platonic = "platonic.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["platonic*"]
